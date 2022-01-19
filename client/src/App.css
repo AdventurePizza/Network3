@@ -1,0 +1,44 @@
+.bottom-left {
+  left: 0;
+  bottom: 0;
+}
+
+.right {
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.panel {
+  scrollbar-color: black white;
+}
+
+.bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+.top-left {
+  left: 0;
+  top: 0;
+  padding: inherit;
+  font-size: 1.5em;
+}
+
+.top-middle {
+  left: "auto";
+  right: "auto";
+  top: 0;
+  font-size: 1em;
+  margin-top: 50px;
+}
+
+.top-right {
+  right: 0;
+  top: 0;
+  font-size: 1.5em;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "drumbeat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd client && npm install",
+    "build": "PUBLIC_URL=https://trydrum.com npm run build --prefix client",
+    "deploy:heroku": "git subtree push --prefix server heroku master"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
