@@ -295,42 +295,47 @@ function App() {
       >
         {statusHistory &&
           statusHistory.map((profile) => (
-            <div
-              key={profile.timestamp}
-              style={{ textAlign: "center", marginInline: 6 }}
-            >
-              <div
-                style={{
-                  width: 300,
-                  border: "solid 4px ",
-                  marginInline: 4,
-                  padding: 1,
-                }}
-              >
-                <div style={{ textAlign: "center", fontSize: "1.4em" }}>
-                  <iframe
-                    title={profile.timestamp}
-                    src={`https://open.spotify.com/embed/${profile.song.type}/${profile.song.id}?utm_source=generator`}
-                    width="100%"
-                    height="152"
-                    frameBorder="0"
-                    allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  ></iframe>
-                </div>
-                <Button
-                  title={profile.key}
-                  size={"small"}
-                  onClick={async () => {
-                    navigator.clipboard.writeText(profile.key);
-                    enqueueSnackbar("Address copied ! " + profile.key, {
-                      variant: "success",
-                    });
+            <div key={profile.timestamp} style={{ textAlign: "center" }}>
+              {profile.song && profile.song.type && profile.song.id && (
+                <div
+                  style={{
+                    width: 300,
+                    border: "solid 4px ",
+                    marginInline: 4,
+                    padding: 1,
                   }}
                 >
-                  {profile.username}{" "}
-                </Button>{" "}
-              </div>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      fontSize: "1.4em",
+                      marginInline: 6,
+                    }}
+                  >
+                    <iframe
+                      title={profile.timestamp}
+                      src={`https://open.spotify.com/embed/${profile.song.type}/${profile.song.id}?utm_source=generator`}
+                      width="100%"
+                      height="152"
+                      frameBorder="0"
+                      allowfullscreen=""
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <Button
+                    title={profile.key}
+                    size={"small"}
+                    onClick={async () => {
+                      navigator.clipboard.writeText(profile.key);
+                      enqueueSnackbar("Address copied ! " + profile.key, {
+                        variant: "success",
+                      });
+                    }}
+                  >
+                    {profile.username}{" "}
+                  </Button>{" "}
+                </div>
+              )}
             </div>
           ))}
       </div>
@@ -348,7 +353,7 @@ function App() {
           overflowX: "scroll",
         }}
       >
-        <div style={{ textAlign: "center", marginInline: 6 }}>
+        <div style={{ textAlign: "center" }}>
           <div
             style={{
               width: 300,
@@ -358,7 +363,7 @@ function App() {
             }}
           >
             <div style={{ textAlign: "center", fontSize: "1.4em" }}>
-              {profile.song && (
+              {profile.song && profile.song.type && profile.song.id && (
                 <iframe
                   title={profile.timestamp}
                   src={`https://open.spotify.com/embed/${profile.song.type}/${profile.song.id}?utm_source=generator`}
@@ -389,7 +394,9 @@ function App() {
         {profiles &&
           profiles.map(
             (profile) =>
-              (!activeAccount || profile.key !== activeAccount.address) && (
+              (!activeAccount || profile.key !== activeAccount.address) &&
+              profile.song.type &&
+              profile.song.id && (
                 <div
                   key={profile.key}
                   style={{ textAlign: "center", marginInline: 6 }}
