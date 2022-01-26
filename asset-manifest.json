@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Network3/static/css/main.93fd52b8.chunk.css",
-    "main.js": "/Network3/static/js/main.f3692cfc.chunk.js",
-    "main.js.map": "/Network3/static/js/main.f3692cfc.chunk.js.map",
+    "main.css": "/Network3/static/css/main.980b1107.chunk.css",
+    "main.js": "/Network3/static/js/main.227b2f1d.chunk.js",
+    "main.js.map": "/Network3/static/js/main.227b2f1d.chunk.js.map",
     "runtime-main.js": "/Network3/static/js/runtime-main.1f6d1ebd.js",
     "runtime-main.js.map": "/Network3/static/js/runtime-main.1f6d1ebd.js.map",
     "static/js/2.6120529e.chunk.js": "/Network3/static/js/2.6120529e.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.812c7aee.chunk.js": "/Network3/static/js/3.812c7aee.chunk.js",
     "static/js/3.812c7aee.chunk.js.map": "/Network3/static/js/3.812c7aee.chunk.js.map",
     "index.html": "/Network3/index.html",
-    "static/css/main.93fd52b8.chunk.css.map": "/Network3/static/css/main.93fd52b8.chunk.css.map",
+    "static/css/main.980b1107.chunk.css.map": "/Network3/static/css/main.980b1107.chunk.css.map",
     "static/js/2.6120529e.chunk.js.LICENSE.txt": "/Network3/static/js/2.6120529e.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/Network3/static/media/Inconsolata-Regular.ed7f6e5b.ttf"
+    "static/media/index.css": "/Network3/static/media/LeagueGothic-Italic.8d24e264.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.1f6d1ebd.js",
     "static/js/2.6120529e.chunk.js",
-    "static/css/main.93fd52b8.chunk.css",
-    "static/js/main.f3692cfc.chunk.js"
+    "static/css/main.980b1107.chunk.css",
+    "static/js/main.227b2f1d.chunk.js"
   ]
 }
