@@ -17,7 +17,7 @@ import { useSnackbar } from "notistack";
 const socketURL =
   window.location.hostname === "localhost"
     ? "ws://localhost:8000"
-    : "wss://network3-backend.herokuapp.com";
+    : "wss://network-3-ff.onrender.com";
 
 const socket = io(socketURL, { transports: ["websocket"] });
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
@@ -132,8 +132,8 @@ function App() {
       if (activeAccount) {
         setSynced(
           activeAccount.address.slice(0, 6) +
-            "..." +
-            activeAccount.address.slice(32, 36)
+          "..." +
+          activeAccount.address.slice(32, 36)
         );
         setShowUnsync(true);
         let tempProfile = await getProfileFB(activeAccount.address);
@@ -499,7 +499,7 @@ function App() {
       </div>
 
       <div className="bottom-left" style={{ position: "absolute" }}>
-        <Button title={"Adventure Networks"} size={"small"} onClick={() => {}}>
+        <Button title={"Adventure Networks"} size={"small"} onClick={() => { }}>
           {" "}
           <div style={{ textAlign: "left" }}>
             {" "}

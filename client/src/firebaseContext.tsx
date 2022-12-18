@@ -23,7 +23,7 @@ export const FirebaseContext = React.createContext<IFirebaseContext>({
 const fetchBase =
   process.env.NODE_ENV === "development"
     ? ""
-    : "https://network3-backend.herokuapp.com";
+    : "https://network-3-ff.onrender.com";
 
 export const FirebaseProvider: React.FC = ({ children }) => {
   const getProfileFB = useCallback(
